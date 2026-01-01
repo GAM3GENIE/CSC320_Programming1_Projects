@@ -22,7 +22,7 @@ public class Main {
             }
             couponPercent = scnr.nextDouble();
             if(couponPercent < 0.0 || couponPercent > 1.0){
-                System.out.print("Coupon mush be more that 0.00 and less than 1.00. Try again: ");
+                System.out.print("Coupon must be more that 0.00 and less than 1.00. Try again: ");
             }
             if(couponPercent == 0.0 || couponPercent == 1.0){
                 couponPercent = .10;
