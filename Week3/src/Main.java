@@ -15,20 +15,16 @@ public class Main {
 
         // Validate input
         System.out.print("Please enter your coupon amount in decimal format. (Example, .10 for 10%): ");
-        do{
-            while(!scnr.hasNextDouble()){
-                System.out.print("Please enter a valid number: ");
-                scnr.next();
-            }
-            couponPercent = scnr.nextDouble();
-            if(couponPercent < 0.0 || couponPercent > 1.0){
-                System.out.print("Coupon must be more that 0.00 and less than 1.00. Try again: ");
-            }
-            if(couponPercent == 0.0 || couponPercent == 1.0){
-                couponPercent = .10;
-                System.out.println("Special coupon applied: 10% off!");
-            }
-        }while (couponPercent < 0.0 || couponPercent > 1.0);
+        while(!scnr.hasNextDouble()){
+            System.out.print("Please enter a valid number: ");
+            scnr.next();
+        }
+        couponPercent = scnr.nextDouble();
+        // If value <= 0 OR > 1, force to 10% and stop asking
+        if (couponPercent <= 0.0 || couponPercent > 1.0) {
+            couponPercent = 0.10;
+            System.out.println("Value out of range. Special coupon applied: 10% off!");
+        }
 
         // Get and validate user input for grocery weeks 1 - 4
         System.out.print("Please enter your week 1 grocery bill: ");
