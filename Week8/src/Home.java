@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class Home {
-
     private int squareFeet;
     private String address;
     private String city;
@@ -9,7 +8,6 @@ public class Home {
     private int zipCode;
     private String modelName;
     private String saleStatus; // sold, available, or under contract
-
     // default constructor
     public Home(){
         try{
@@ -25,7 +23,6 @@ public class Home {
             System.out.println("error in default constructor: " + e.getMessage());
         }
     }
-
     // parameterized constructor
     public Home(int squareFeet, String address, String city, String state, int zipCode, String modelName, String saleStatus){
         try{
@@ -40,7 +37,6 @@ public class Home {
             System.out.println("error in parameterized constructor: " + e.getMessage());
         }
     }
-
     // add new home
     public String addHome(int squareFeet, String address, String city, String state, int zipCode, String modelName, String saleStatus){
         try{
@@ -56,7 +52,6 @@ public class Home {
             return "failed to add home: "+ e.getMessage();
         }
     }
-
     // clear home details
     public String removeHome(){
         try{
@@ -72,7 +67,6 @@ public class Home {
             return "failed to remove home: " + e.getMessage();
         }
     }
-
     // update home details
     public String updateHome(int squareFeet, String address, String city, String state, int zipCode, String modelName, String saleStatus){
         try{
@@ -88,7 +82,6 @@ public class Home {
             return "failed to update home: " + e.getMessage();
         }
     }
-
     // print home information to screen
     public String homeInfo(){
         try{

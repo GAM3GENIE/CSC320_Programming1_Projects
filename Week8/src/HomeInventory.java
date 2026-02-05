@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class HomeInventory {
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
-
         try{
             // call home class with parameterized constructor
             Home[] homes = new Home[1];
@@ -18,7 +17,6 @@ public class HomeInventory {
                     95991,
                     "The Grove",
                     "available"
-
             );
             // list values
             System.out.println("=== Initial Inventory ===");
@@ -77,7 +75,6 @@ public class HomeInventory {
             scn.close();
         }
     }
-
     // helper to write inventory to file
     private static void writeInventoryToFile(Home[] homes, String filePath){
         try(FileWriter writer = new FileWriter(filePath)){
